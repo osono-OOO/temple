@@ -101,7 +101,7 @@ function omikuziDraw() {
     var difTime = tomorrow.getTime() - (today.getTime() - today0.getTime()); //今から明日0時0分0秒までの時間
     var difSecond = Math.floor(difTime / (1000)); //今から明日0時0分0秒までの秒数
 
-    document.cookie = "name=temple;secure;max-age=" + 0;
+    document.cookie = "name=temple;max-age=0";
 }
 
 //帰るボタンを押すと起こること
