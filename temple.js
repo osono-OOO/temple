@@ -90,10 +90,7 @@ function omikuziDraw() {
     resultArea.appendChild(kekkaP5);
 
 
-//cookieの削除期間指定（明日の0時) これにより明日0時までおみくじを引けな
-    var today0 = new Date();
-    today0.setHours(0, 0, 0, 0); //今日の0時0分0秒
-
+//cookieの削除期間指定（明日の0時) これにより明日0時までおみくじを引けない
     var tomorrow = new Date();
     tomorrow.setHours(24,0,0,0); //明日の0時0分0秒
 
