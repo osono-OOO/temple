@@ -1,6 +1,5 @@
 'use strict';
 //帰るボタンを隠しておく
-document.cookie = "name=temple;max-age=0";
 document.getElementById('home').style.display = 'none';
 const visit = document.getElementById('visitor');
 
@@ -233,7 +232,7 @@ function changeFirst() {
         unwelcome.appendChild(p4);
     }
 
-
+document.cookie = "name=temple;max-age=0";
 
 
 
