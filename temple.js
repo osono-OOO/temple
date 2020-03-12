@@ -90,8 +90,9 @@ function omikuziDraw() {
     resultArea.appendChild(kekkaP5);
 
 
-
-//cookieの削除期間指定（明日の0時) これにより明日0時までおみくじを引けない
+//cookieの削除期間指定（明日の0時) これにより明日0時までおみくじを引けな
+    var today0 = new Date();
+    today0.setHours(0, 0, 0, 0); //今日の0時0分0秒
 
     var tomorrow = new Date();
     tomorrow.setHours(24,0,0,0); //明日の0時0分0秒
@@ -99,7 +100,7 @@ function omikuziDraw() {
     var today = new Date();      //今の時間
 
     var difTime = tomorrow.getTime() - today.getTime(); //今から明日0時0分0秒までの時間
-    var difSecond = difTime / 1000; //今から明日0時0分0秒までの秒数
+    var difSecond = Math.floor(difTime / 1000); //今から明日0時0分0秒までの秒数
 
     document.cookie = "name=temple;max-age=" + difSecond;
 }
