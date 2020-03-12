@@ -93,9 +93,6 @@ function omikuziDraw() {
 
 
     //cookieの削除期間指定（明日の0時) これにより明日0時までおみくじを引けない
-    var today0 = new Date();
-    today0.setHours(0, 0, 0, 0); //今日の0時0分0秒
-
     var tomorrow = new Date();
     tomorrow.setHours(24,0,0,0); //明日の0時0分0秒
 
@@ -104,7 +101,7 @@ function omikuziDraw() {
     var difTime = tomorrow.getTime() - (today.getTime() - today0.getTime()); //今から明日0時0分0秒までの時間
     var difSecond = Math.floor(difTime / (1000)); //今から明日0時0分0秒までの秒数
 
-    document.cookie = "name=temple;secure;max-age=" + difSecond;
+    document.cookie = "name=temple;secure;max-age=" + 0;
 }
 
 //帰るボタンを押すと起こること
